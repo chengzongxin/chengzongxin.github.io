@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Joe.cheng</title>
+    <description>玛卡巴卡</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 07 Aug 2024 20:14:19 +0800</pubDate>
+    <lastBuildDate>Wed, 07 Aug 2024 20:14:19 +0800</lastBuildDate>
+    <generator>Jekyll v4.3.3</generator>
+    
+      <item>
+        <title>Githubpage + jeklly 搭建个人博客</title>
+        <description>&lt;h1 id=&quot;githubpage--jeklly-搭建个人博客&quot;&gt;Githubpage + jeklly 搭建个人博客&lt;/h1&gt;
+
+&lt;h2 id=&quot;下载目录fork有时候不灵我这里直接down&quot;&gt;下载目录，fork有时候不灵，我这里直接down&lt;/h2&gt;
+
+&lt;p&gt;https://github.com/leopardpan/leopardpan.github.io?tab=readme-ov-file&lt;/p&gt;
+
+&lt;h2 id=&quot;文件删除或者保留清单&quot;&gt;文件删除或者保留清单&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;del&gt;_posts下所有文件&lt;/del&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;del&gt;README.md&lt;/del&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;del&gt;Rakefile、Gemfile、Gemfile.lock&lt;/del&gt;&lt;/li&gt;
+  &lt;li&gt;feed.xml 订阅（可以保留）&lt;/li&gt;
+  &lt;li&gt;&lt;del&gt;CNAME 域名映射&lt;/del&gt;&lt;/li&gt;
+  &lt;li&gt;images/ 目录下文件保留&lt;/li&gt;
+  &lt;li&gt;&lt;del&gt;images/payimg （打赏等，删除）&lt;/del&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;del&gt;images/posts&lt;/del&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;修改config&quot;&gt;修改config&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;百度统计替换&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;https://tongji.baidu.com/main/setting/57650434/home/site/getjs?siteId=20885691&lt;/p&gt;
+
+&lt;p&gt;获取代码后面的类似md5的代码&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;script&amp;gt;
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement(&quot;script&quot;);
+  hm.src = &quot;https://hm.baidu.com/hm.js?xxx&quot;;
+  var s = document.getElementsByTagName(&quot;script&quot;)[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+&amp;lt;/script&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;调试&quot;&gt;调试&lt;/h2&gt;
+
+&lt;p&gt;安装完后在&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;D:\Ruby33-x64\lib\ruby\gems\3.3.0\gems\jekyll-4.3.3&lt;/code&gt;里运行&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll server&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;然后打开 http://127.0.0.1:4000&lt;/p&gt;
+
+&lt;h2 id=&quot;问题修复&quot;&gt;问题修复&lt;/h2&gt;
+
+&lt;p&gt;安装完后，主页看不到列表，观察命令行有报错&lt;/p&gt;
+
+&lt;p&gt;从 Jekyll 3.0 开始，jekyll-paginate 被移除了，因为与其他核心功能不能很好的协作。如果出现这种提示&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ jekyll serve
+Configuration file: /var/www/lanyon-mobile/_config.yml
+Deprecation: You appear to have pagination turned on, but you haven’t included the jekyll-paginate gem. Ensure you have plugins: [jekyll-paginate] in your configuration file.
+Source: /var/www/lanyon-mobile
+Destination: /var/www/lanyon-mobile/_site
+Incremental build: disabled. Enable with --incremental
+Generating…
+Since v3.0, permalinks for pages in subfolders must be relative to the site source directory, not the parent directory. Check https://jekyllrb.com/docs/upgrading/ for more info.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;解决办法：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;安装插件&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;$ gem install ‘jekyll-paginate’&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;在 _config.yml 中增加：&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;plugins: [jekyll-paginate]&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Wed, 07 Aug 2024 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2024/08/jekyll%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+        <guid isPermaLink="true">http://localhost:4000/2024/08/jekyll%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+        
+        <category>jeklly</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
